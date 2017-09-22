@@ -14,4 +14,4 @@ git push origin [name of the branch you want to push to]
 
 ## Github README Template
 
-[Get from here](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
+[Get from here](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2) - Thanks to PurpleBooth!
