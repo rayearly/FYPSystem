@@ -18,6 +18,6 @@ git push origin [name of the branch you want to push to]
 
 ## Some other stuff on Git Command
 
-Fork - Get the copy of the entire repository of another account to your account, and modify it as you like without making changes on the original owner repo.
+* **Fork** - Get the copy of the entire repository of another account to your account, and modify it as you like without making changes on the original owner repo.
 
-Pull Request - ask the original repo to pull your changes, maybe you are doing a team project, and the changes you made need to go to the original repo creator.
+* **Pull Request** - ask the original repo to pull your changes, maybe you are doing a team project, and the changes you made need to go to the original repo creator.
