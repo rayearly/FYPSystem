@@ -21,6 +21,7 @@ namespace FYPSystem.Models
 
         public virtual Student Student { get; set; }
         
-        // go to branch test
+        // go to branch master
+
     }
 }
