@@ -199,12 +199,21 @@
     <Compile Include="Migrations\201709211435241_InitialModel.Designer.cs">
       <DependentUpon>201709211435241_InitialModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201709221757242_InitialModelAddProject.cs" />
+    <Compile Include="Migrations\201709221757242_InitialModelAddProject.Designer.cs">
+      <DependentUpon>201709221757242_InitialModelAddProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709221800383_InitialModelAddProjectInStudentObject.cs" />
+    <Compile Include="Migrations\201709221800383_InitialModelAddProjectInStudentObject.Designer.cs">
+      <DependentUpon>201709221800383_InitialModelAddProjectInStudentObject.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Course.cs" />
     <Compile Include="Models\Faculty.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Project.cs" />
     <Compile Include="Models\Semester.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Models\SupervisorStudents.cs" />
@@ -289,6 +298,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201709211435241_InitialModel.resx">
       <DependentUpon>201709211435241_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709221757242_InitialModelAddProject.resx">
+      <DependentUpon>201709221757242_InitialModelAddProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709221800383_InitialModelAddProjectInStudentObject.resx">
+      <DependentUpon>201709221800383_InitialModelAddProjectInStudentObject.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

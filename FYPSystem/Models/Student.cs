@@ -15,15 +15,19 @@ namespace FYPSystem.Models
 
         public int CourseId { get; set; }
 
-        public Course Course { get; set; }
+        public int SemesterId { get; set; }
 
         public int FacultyId { get; set; }
+
+        public int ProjectId { get; set; }
+
+        public Course Course { get; set; }
 
         public Faculty Faculty { get; set; }
 
         public Semester Semester { get; set; }
 
-        public int SemesterId { get; set; }
+        public Project Project { get; set; }
 
         public virtual ICollection<SupervisorStudents> Supervisors { get; set; }
     }
