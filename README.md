@@ -1,6 +1,6 @@
 # FYPSystem
 
-Some Git code:
+### Some Git code:
 
 git checkout -b [name of new branch] (creating a new branch)
 git checkout [name of branch you want to go] (go to 'this' branch)
