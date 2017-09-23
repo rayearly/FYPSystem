@@ -207,6 +207,10 @@
     <Compile Include="Migrations\201709221800383_InitialModelAddProjectInStudentObject.Designer.cs">
       <DependentUpon>201709221800383_InitialModelAddProjectInStudentObject.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201709230430542_PopulateFacultyCourseSemester.cs" />
+    <Compile Include="Migrations\201709230430542_PopulateFacultyCourseSemester.Designer.cs">
+      <DependentUpon>201709230430542_PopulateFacultyCourseSemester.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Course.cs" />
@@ -304,6 +308,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201709221800383_InitialModelAddProjectInStudentObject.resx">
       <DependentUpon>201709221800383_InitialModelAddProjectInStudentObject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709230430542_PopulateFacultyCourseSemester.resx">
+      <DependentUpon>201709230430542_PopulateFacultyCourseSemester.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
