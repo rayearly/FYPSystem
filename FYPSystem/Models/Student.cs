@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Web;
 
 namespace FYPSystem.Models
@@ -9,17 +11,26 @@ namespace FYPSystem.Models
     {
         public int Id { get; set; }
 
+        [Display(Name = "Matric Number")]
+        [Required]
         public string MatricNo { get; set; }
 
+        [Required]
         public string Name { get; set; }
 
+        [Display(Name = "Title")]
+        public string ProjectTitle { get; set; }
+
+        public string Abstract { get; set; }
+
+        [Display(Name = "Course Code")]
         public int CourseId { get; set; }
 
+        [Display(Name = "Semester")]
         public int SemesterId { get; set; }
 
+        [Display(Name = "Faculty")]
         public int FacultyId { get; set; }
-
-        public int ProjectId { get; set; }
 
         public Course Course { get; set; }
 
@@ -27,8 +38,6 @@ namespace FYPSystem.Models
 
         public Semester Semester { get; set; }
 
-        public Project Project { get; set; }
-
-        public virtual ICollection<SupervisorStudents> Supervisors { get; set; }
+        public virtual IList<SupervisorStudents> Supervisors { get; set; }
     }
 }

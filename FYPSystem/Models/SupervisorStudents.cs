@@ -9,9 +9,11 @@ namespace FYPSystem.Models
 {
     public class SupervisorStudents
     {
+        [Required]
         [Key, Column(Order = 0)]
         public int SupervisorId { get; set; }
 
+        [Required]
         [Key, Column(Order = 1)]
         public int StudentId { get; set; }
 

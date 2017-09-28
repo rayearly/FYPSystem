@@ -26,7 +26,6 @@ namespace FYPSystem.Models
         public DbSet<Course> Courses { get; set; }
         public DbSet<Faculty> Faculties { get; set; }
         public DbSet<Semester> Semesters { get; set; }
-        public DbSet<Project> Projects { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

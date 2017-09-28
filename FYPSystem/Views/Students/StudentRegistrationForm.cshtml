@@ -1,0 +1,82 @@
+﻿@using Microsoft.Ajax.Utilities
+@model FYPSystem.ViewModel.StudentRegistrationViewModel
+@{
+    ViewBag.Title = "StudentRegistrationForm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Student Registration Form</h2>
+
+@using (Html.BeginForm("Save", "Students"))
+{
+    @Html.ValidationSummary(true, "Please Fix the following error(s)")
+
+    <p><h3>Student Information</h3></p>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Student.MatricNo)
+        @Html.TextBoxFor(m => m.Student.MatricNo, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Student.MatricNo)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Student.Name)
+        @Html.TextBoxFor(m => m.Student.Name, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Student.Name)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Student.CourseId)
+        @Html.DropDownListFor(m => m.Student.CourseId, new SelectList(Model.Courses, "Id", "CourseCode"), "--Select Course Code--", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Student.CourseId)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Student.FacultyId)
+        @Html.DropDownListFor(m => m.Student.FacultyId, new SelectList(Model.Faculties, "Id", "Name"), "--Select Faculty--", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Student.FacultyId)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Student.SemesterId)
+        @Html.DropDownListFor(m => m.Student.SemesterId, new SelectList(Model.Semesters, "Id", "Name"), "--Select Semester--", new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Student.SemesterId)
+    </div>
+
+    <p><h3>Supervisor Information (OPTIONAL)</h3></p>
+    <div class="form-group">
+        @Html.Label("Main Supervisor")
+        @Html.DropDownListFor(m => m.Student.Supervisors[0].SupervisorId, new SelectList(Model.Supervisors, "Id", "Name"), "--Select Supervisor--", new { @class = "form-control" })
+        @Html.HiddenFor(m => m.Student.Supervisors[0].TagMainOrCo, new { Value = "Main" })
+        @Html.ValidationMessageFor(m => m.Student.Supervisors)
+    </div>
+
+    <div class="form-group">
+        @Html.Label("Co Supervisor")
+        @Html.DropDownListFor(m => m.Student.Supervisors[1].SupervisorId, new SelectList(Model.Supervisors, "Id", "Name"), "--Select Supervisor--", new{@class = "form-control"})       
+        @Html.HiddenFor(m => m.Student.Supervisors[1].TagMainOrCo, new {Value = "Co"})
+        @Html.ValidationMessageFor(m => m.Student.Supervisors)
+        
+    </div>
+
+
+    <p><h3>Project Information (OPTIONAL)</h3></p>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Student.ProjectTitle)
+        @Html.TextBoxFor(m => m.Student.ProjectTitle, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Student.ProjectTitle)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(m => m.Student.Abstract)
+        @Html.TextAreaFor(m => m.Student.Abstract, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.Student.Abstract)
+    </div>
+
+    @Html.HiddenFor(m => m.Student.Id)
+
+    @Html.AntiForgeryToken()
+    
+    <button type="submit" class="btn btn-primary js-confirm">Save</button> 
+}

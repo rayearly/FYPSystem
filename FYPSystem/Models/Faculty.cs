@@ -10,6 +10,7 @@ namespace FYPSystem.Models
     {
         public int Id { get; set; }
 
+        [Display(Name = "Faculty")]
         [Required]
         public string Name { get; set; }
 

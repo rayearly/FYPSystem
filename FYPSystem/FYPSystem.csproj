@@ -193,6 +193,7 @@
     <Compile Include="Controllers\CoursesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\StudentsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -220,6 +221,34 @@
     <Compile Include="Migrations\201709231614117_AddingValidation.Designer.cs">
       <DependentUpon>201709231614117_AddingValidation.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201709240832468_MadeProjectIdOptionalInStudentModel.cs" />
+    <Compile Include="Migrations\201709240832468_MadeProjectIdOptionalInStudentModel.Designer.cs">
+      <DependentUpon>201709240832468_MadeProjectIdOptionalInStudentModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709240849347_DeleteProjectModel.cs" />
+    <Compile Include="Migrations\201709240849347_DeleteProjectModel.Designer.cs">
+      <DependentUpon>201709240849347_DeleteProjectModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709241053575_AddStaffNumber.cs" />
+    <Compile Include="Migrations\201709241053575_AddStaffNumber.Designer.cs">
+      <DependentUpon>201709241053575_AddStaffNumber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709241113159_UpdateStudentAnnotation.cs" />
+    <Compile Include="Migrations\201709241113159_UpdateStudentAnnotation.Designer.cs">
+      <DependentUpon>201709241113159_UpdateStudentAnnotation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709280939338_AddRequiredToTag.cs" />
+    <Compile Include="Migrations\201709280939338_AddRequiredToTag.Designer.cs">
+      <DependentUpon>201709280939338_AddRequiredToTag.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709280943491_AddRequiredToSS.cs" />
+    <Compile Include="Migrations\201709280943491_AddRequiredToSS.Designer.cs">
+      <DependentUpon>201709280943491_AddRequiredToSS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709280948087_AddRequiredToSSs.cs" />
+    <Compile Include="Migrations\201709280948087_AddRequiredToSSs.Designer.cs">
+      <DependentUpon>201709280948087_AddRequiredToSSs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Course.cs" />
@@ -233,8 +262,11 @@
     <Compile Include="Models\Supervisor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModel\AssignSvViewModel.cs" />
+    <Compile Include="ViewModel\StudentRegistrationViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-lumen.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
@@ -293,10 +325,12 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Courses\Index.cshtml" />
     <Content Include="Views\Courses\CourseForm.cshtml" />
+    <Content Include="Views\Shared\_NavBar.cshtml" />
+    <Content Include="Views\Students\Index.cshtml" />
+    <Content Include="Views\Students\StudentRegistrationForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Customers\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -329,6 +363,27 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201709231614117_AddingValidation.resx">
       <DependentUpon>201709231614117_AddingValidation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709240832468_MadeProjectIdOptionalInStudentModel.resx">
+      <DependentUpon>201709240832468_MadeProjectIdOptionalInStudentModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709240849347_DeleteProjectModel.resx">
+      <DependentUpon>201709240849347_DeleteProjectModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709241053575_AddStaffNumber.resx">
+      <DependentUpon>201709241053575_AddStaffNumber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709241113159_UpdateStudentAnnotation.resx">
+      <DependentUpon>201709241113159_UpdateStudentAnnotation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709280939338_AddRequiredToTag.resx">
+      <DependentUpon>201709280939338_AddRequiredToTag.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709280943491_AddRequiredToSS.resx">
+      <DependentUpon>201709280943491_AddRequiredToSS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709280948087_AddRequiredToSSs.resx">
+      <DependentUpon>201709280948087_AddRequiredToSSs.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

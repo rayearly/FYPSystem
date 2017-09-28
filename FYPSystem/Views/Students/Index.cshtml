@@ -1,0 +1,41 @@
+﻿@using FYPSystem.Models
+@model IEnumerable<Student>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Student List</h2>
+@Html.ActionLink("New Student", "New", "Students", null, new { @class = "btn btn-primary" })
+@if (!Model.Any())
+{
+    <p>No Students Registered Yet!</p>
+}
+else
+{
+    <table class="table table-bordered table-hover">
+        <thead>
+        <tr>
+            <th>Matric No.</th>
+            <th>Name</th>
+            <th>Supervisors</th>
+        </tr>
+        </thead>
+        <tbody>
+            @foreach (var student in Model)
+            {
+                <tr>
+                    <td>@Html.ActionLink(student.MatricNo, "Edit", "Students", new {id = student.Id}, null)</td>
+                    <td>@student.Name</td>
+                    <td>@foreach (var s in student.Supervisors)
+                        {
+                            <p>@s.SupervisorId</p>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
